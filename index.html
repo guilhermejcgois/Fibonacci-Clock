@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<title>Fibonacci clock</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="main.js"></script>
+</head>
+<body>
+	<div id='clock'>
+		<div id='_2'></div>
+		<div id='_1a'></div>
+		<div id='_1b'></div>
+		<div id='_3'></div>
+		<div id='_5'></div>
+	</div>
+	<script type="text/javascript">
+		_1a = document.getElementById('_1a');
+		_1b = document.getElementById('_1b');
+		_2  = document.getElementById('_2');
+		_3  = document.getElementById('_3');
+		_5  = document.getElementById('_5');
+
+		fib = new FibonacciClock(_1a, _1b, _2, _3, _5);
+
+		fib.init();
+		fib.hoursRGB(0, 0, 204);
+		fib.minutesRGB(204, 0, 0);
+
+		fib.start();
+	</script>
+</body>
+</html>
